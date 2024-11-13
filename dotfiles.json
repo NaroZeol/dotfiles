@@ -1,0 +1,34 @@
+{
+    "dotfiles": [
+        {
+            "name": "gitconfig",
+            "source": "git/gitconfig",
+            "destination": "~/.gitconfig"
+        },
+        {
+            "name": "starship",
+            "source": "starship/starship.toml",
+            "destination": "~/.config/starship.toml"
+        },
+        {
+            "name": "tmux",
+            "source": "tmux/tmux.conf",
+            "destination": "~/.tmux.conf"
+        },
+        {
+            "name": "vim",
+            "source": "vim/vimrc",
+            "destination": "~/.vimrc"
+        },
+        {
+            "name": "vim/plugin/coc-settings",
+            "source": "vim/plugin/coc-settings.json",
+            "destination": "~/.vim/coc-settings.json"
+        },
+        {
+            "name": "zsh",
+            "source": "zsh/zshrc",
+            "destination": "~/.zshrc"
+        }
+    ]
+}
