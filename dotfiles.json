@@ -26,6 +26,11 @@
             "destination": "~/.vim/coc-settings.json"
         },
         {
+            "name": "vim/plugin/coc-binding",
+            "source": "vim/plugin/coc-binding.vim",
+            "destination": "~/.vim/coc-binding.vim"
+        },
+        {
             "name": "zsh",
             "source": "zsh/zshrc",
             "destination": "~/.zshrc"
