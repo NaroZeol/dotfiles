@@ -1,0 +1,9 @@
+[user]
+	name = NaroZeol
+	email = narozeol@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+[alias]
+    graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
