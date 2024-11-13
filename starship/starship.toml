@@ -1,0 +1,129 @@
+add_newline = false
+
+[git_status]
+format = '($all_status$ahead_behind($style))'
+conflicted = '❌ '
+ahead = '⇡${count} '
+behind = '⇣${count} '
+diverged = '⇕⇡${ahead_count}⇣${behind_count} '
+# up_to_date = '✔  '
+untracked = '❓'
+stashed = '📦 '
+modified = '🖊  '
+staged = '[++\($count\)](green) '
+renamed = '🖌  '
+deleted = '🗑 '
+
+[battery]
+full_symbol = '🔋'
+charging_symbol = '⚡'
+discharging_symbol = '💀'
+
+[hostname]
+ssh_only = true
+format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
+ssh_symbol = '🌐 '
+
+[status]
+format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = true
+
+[sudo]
+symbol = '🧙 '
+format = '[$symbol]($style)'
+style = 'bold yellow'
+disabled = false
+
+[bun]
+disabled=true
+[buf]
+disabled=true
+[c]
+disabled=true
+[cmake]
+disabled=true
+[cobol]
+disabled=true
+[conda]
+disabled=true
+[crystal]
+disabled=true
+[daml]
+disabled=true
+[dart]
+disabled=true
+[deno]
+disabled=true
+[dotnet]
+disabled=true
+[elixir]
+disabled=true
+[elm]
+disabled=true
+[erlang]
+disabled=true
+[fennel]
+disabled=true
+[gleam]
+disabled=true
+[golang]
+disabled=true
+[gradle]
+disabled=true
+[haxe]
+disabled=true
+[helm]
+disabled=true
+[java]
+disabled=true
+[julia]
+disabled=true
+[kotlin]
+disabled=true
+[lua]
+disabled=true
+[meson]
+disabled=true
+[nim]
+disabled=true
+[nodejs]
+disabled=true
+[ocaml]
+disabled=true
+[opa]
+disabled=true
+[perl]
+disabled=true
+[php]
+disabled=true
+[pulumi]
+disabled=true
+[purescript]
+disabled=true
+[python]
+disabled=true
+[quarto]
+disabled=true
+[raku]
+disabled=true
+[red]
+disabled=true
+[rlang]
+disabled=true
+[ruby]
+disabled=true
+[rust]
+disabled=true
+[solidity]
+disabled=true
+[typst]
+disabled=true
+[swift]
+disabled=true
+[vagrant]
+disabled=true
+[vlang]
+disabled=true
+[zig]
+disabled=true
