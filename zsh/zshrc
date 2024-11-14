@@ -12,7 +12,12 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # >>> starship init >>>
-eval "$(starship init zsh)" # start startship
+if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
+      "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
+    zle -N zle-keymap-select "";
+fi
+
+eval "$(starship init zsh)"
 precmd() { precmd() { echo "" } }
 # <<< starship init <<<
 
@@ -53,9 +58,8 @@ fi
 # >>> personal settings >>>
 unsetopt BEEP
 
-# for ctrl+left and ctrl+right
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+# key-bindings
+bindkey -v # vi mode
 
 # format for command "time"
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
