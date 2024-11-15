@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 plugins=(
     colored-man-pages
     sudo
@@ -10,6 +10,17 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# >>> personal settings >>>
+unsetopt BEEP
+
+# key-bindings
+bindkey -v # vi mode
+bindkey "^]" autosuggest-accept # "ctrl + ]" to accept autosuggestions
+
+# format for command "time"
+TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
+# <<< personal settings <<<
 
 # >>> starship init >>>
 if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
@@ -21,49 +32,8 @@ eval "$(starship init zsh)"
 precmd() { precmd() { echo "" } }
 # <<< starship init <<<
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("$HOME/miniconda3/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/miniconda3/bin:$PATH"
-    fi
+# load local configurations
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
 fi
-unset __conda_setup
-# <<< conda initialize <<<
 
-# <<< Surface Linux Specific >>>
-if [[ "$(hostname)" == "Salieri" ]]; then
-    # transparency
-    TRANSPARENCY_HEX=$(printf 0x%x $((0xffffffff * 90 / 100)))
-    if [ -n "$WINDOWID" ]; then
-        # 检查窗口名称是否包含”vscode“，如果包含则跳过
-        if ! xprop -id "$WINDOWID" | grep -iq "Visual Studio Code"; then
-            xprop -id "$WINDOWID" -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY "$TRANSPARENCY_HEX"
-        fi
-    else
-        windowid=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)" | tail -n1 | cut -d ' ' -f 5)
-        # 检查窗口名称是否包含”vscode“，如果包含则跳过
-        if ! xprop -id "$windowid" | grep -iq "Visual Studio Code"; then
-            xprop -id "$windowid" -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY "$TRANSPARENCY_HEX"
-        fi
-    fi
-fi
-# >>> Surface Linux Specific >>>
-
-# >>> personal settings >>>
-unsetopt BEEP
-
-# key-bindings
-bindkey -v # vi mode
-
-# format for command "time"
-TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
-
-# linker
-LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
-# <<< personal settings <<<
