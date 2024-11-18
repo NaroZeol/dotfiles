@@ -23,7 +23,7 @@ set incsearch 	        "增量式搜索"
 set hlsearch 	        "高亮搜索"
 set number              "使用绝对行号"
 set relativenumber      "使用相对行号"
-set showmode            "显示模式"
+set noshowmode          "不显示模式"
 set fileencodings=utf-8 "设置文件编码"
 set termencoding=utf-8
 set encoding=utf-8
