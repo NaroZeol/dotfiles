@@ -6,6 +6,11 @@
             "destination": "~/.gitconfig"
         },
         {
+            "name": "gitignore_global",
+            "source": "git/gitignore_global",
+            "destination": "~/.gitignore_global"
+        },
+        {
             "name": "starship",
             "source": "starship/starship.toml",
             "destination": "~/.config/starship.toml"
