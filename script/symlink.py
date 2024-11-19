@@ -39,6 +39,11 @@ def link_dotfile(src_file, dest_file, backup_dir):
         print(f"Destination directory does not exist: {dest_dir}")
         sys.exit(1)
 
+    # Check if the destination path is already a symlink to the source file
+    if os.path.islink(dest_file) and os.path.realpath(dest_file) == src_file:
+        print(f"Symlink already exists: {dest_file} -> {src_file}")
+        return
+
     # If the destination path is a file, back it up
     if os.path.isfile(dest_file):
         print(f"Detected existing file {dest_file}, backing up...")
