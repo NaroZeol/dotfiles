@@ -34,8 +34,13 @@ set whichwrap+=[,]      "允许插入模式下通过左右箭头换行"
 set fillchars=eob:-     "将signcolumn的填充符换为-"
 set showcmd             "显示命令"
 set wildmenu            "显示命令建议"
+set history=200		    "保留200条命令历史记录
 set showmatch           "显示匹配"
 set mouse=a             "启用鼠标"
+
+set ttimeout		    "
+set ttimeoutlen=100     "ESC延迟
+
 colorscheme habamax     "设置主题"
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 
