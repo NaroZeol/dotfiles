@@ -21,8 +21,8 @@ discharging_symbol = '💀'
 
 [hostname]
 ssh_only = true
-format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
-ssh_symbol = '🌐 '
+format = '[$ssh_symbol](bold) on [$hostname](bold bright-blue) '
+ssh_symbol = '🌏'
 
 [status]
 format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
@@ -92,6 +92,8 @@ disabled=true
 [ocaml]
 disabled=true
 [opa]
+disabled=true
+[package]
 disabled=true
 [perl]
 disabled=true
