@@ -19,8 +19,8 @@ set vb t_vb=            "关闭提示音"
 set expandtab           "使用空格键代替制表符"
 set tabstop=4           "制表符占四个空格"
 set shiftwidth=4        "默认缩进四空格大小"
-set incsearch 	        "增量式搜索"
-set hlsearch 	        "高亮搜索"
+set incsearch           "增量式搜索"
+set hlsearch            "高亮搜索"
 set number              "使用绝对行号"
 set relativenumber      "使用相对行号"
 set noshowmode          "不显示模式"
@@ -34,23 +34,23 @@ set whichwrap+=[,]      "允许插入模式下通过左右箭头换行"
 set fillchars=eob:-     "将signcolumn的填充符换为-"
 set showcmd             "显示命令"
 set wildmenu            "显示命令建议"
-set history=200		    "保留200条命令历史记录
+set history=200         "保留200条命令历史记录
 set showmatch           "显示匹配"
 set mouse=a             "启用鼠标"
 
-set ttimeout		    "
+set ttimeout            "
 set ttimeoutlen=100     "ESC延迟
 
 colorscheme habamax     "设置主题"
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
+
+let mapleader = " "
 
 inoremap jk <ESC>
 nnoremap J <PageDown>
 nnoremap K <PageUp>
 nnoremap <tab> :bn<cr>
 nnoremap <s-tab> :bp<cr>
-
-let mapleader = "\<space>"
 
 " 启用持久化 undo
 set undofile
@@ -61,6 +61,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'vim-airline/vim-airline'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'easymotion/vim-easymotion'
     call plug#end()
 endif
 
