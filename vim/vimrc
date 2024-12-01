@@ -65,6 +65,10 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     call plug#end()
 endif
 
+"----------------<easymotion>#config begin----------------------------------------------------------------"
+let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj' "default keys without ';'
+"----------------<easymotion>#config end  ----------------------------------------------------------------"
+
 "----------------<airline>#config begin-------------------------------------------------------------------"
 let g:airline_symbols = {} 
 let g:airline_powerline_fonts=1
