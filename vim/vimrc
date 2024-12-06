@@ -19,6 +19,8 @@ set vb t_vb=            "关闭提示音"
 set expandtab           "使用空格键代替制表符"
 set tabstop=4           "制表符占四个空格"
 set shiftwidth=4        "默认缩进四空格大小"
+set smarttab            "智能tab"
+set smartindent         "智能缩进"
 set incsearch           "增量式搜索"
 set hlsearch            "高亮搜索"
 set number              "使用绝对行号"
@@ -62,6 +64,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'easymotion/vim-easymotion'
+    Plug 'jiangmiao/auto-pairs'
     call plug#end()
 endif
 
