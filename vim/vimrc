@@ -51,8 +51,6 @@ let mapleader = " "
 inoremap jk <ESC>
 nnoremap J <PageDown>
 nnoremap K <PageUp>
-nnoremap <tab> :bn<cr>
-nnoremap <s-tab> :bp<cr>
 
 " 启用持久化 undo
 set undofile
