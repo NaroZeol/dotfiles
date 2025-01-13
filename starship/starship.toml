@@ -1,5 +1,32 @@
 add_newline = false
 
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$conda\
+$memory_usage\
+$sudo\
+$cmd_duration\
+$fill$status\
+$line_break\
+$jobs\
+$battery\
+$time\
+$os\
+$container\
+$shell\
+$character"""
+
+[fill]
+symbol = ' '
+disabled = false
+
 [git_status]
 format = '($all_status$ahead_behind($style))'
 conflicted = '❌ '
@@ -27,12 +54,16 @@ ssh_symbol = '🌏'
 [status]
 format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
 map_symbol = true
-disabled = true
+disabled = false
 
 [sudo]
 symbol = '🧙 '
 format = '[$symbol]($style)'
 style = 'bold yellow'
+disabled = false
+
+[conda]
+format = '[$symbol$environment](dimmed green) '
 disabled = false
 
 [bun]
@@ -44,8 +75,6 @@ disabled=true
 [cmake]
 disabled=true
 [cobol]
-disabled=true
-[conda]
 disabled=true
 [crystal]
 disabled=true
