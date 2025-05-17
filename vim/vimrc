@@ -16,7 +16,6 @@ if &term =~ "xterm"
 endif
 
 set vb t_vb=            "关闭提示音"
-set expandtab           "使用空格键代替制表符"
 set tabstop=4           "制表符占四个空格"
 set shiftwidth=4        "默认缩进四空格大小"
 set smarttab            "智能tab"
