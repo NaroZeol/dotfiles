@@ -14,6 +14,9 @@ source $ZSH/oh-my-zsh.sh
 # >>> personal settings >>>
 unsetopt BEEP
 
+# tab size
+tabs -4
+
 # key-bindings
 bindkey -v # vi mode
 bindkey "^]" autosuggest-accept # "ctrl + ]" to accept autosuggestions
