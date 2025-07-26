@@ -19,6 +19,7 @@ tabs -4
 
 # key-bindings
 bindkey -v # vi mode
+bindkey '^X^E' edit-command-line # "ctrl x + ctrl e" to edit command in vim
 bindkey "^]" autosuggest-accept # "ctrl + ]" to accept autosuggestions
 
 # format for command "time"
