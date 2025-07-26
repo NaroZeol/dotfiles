@@ -28,7 +28,6 @@ set noshowmode          "不显示模式"
 set fileencodings=utf-8 "设置文件编码"
 set termencoding=utf-8
 set encoding=utf-8
-
 set termguicolors       "使用真色彩"
 set nowrap              "设置不自动换行"
 set whichwrap+=[,]      "允许插入模式下通过左右箭头换行"
@@ -38,6 +37,8 @@ set wildmenu            "显示命令建议"
 set history=200         "保留200条命令历史记录
 set showmatch           "显示匹配"
 set mouse=a             "启用鼠标"
+set foldmethod=syntax   "设置折叠模式为语法模式"
+set foldlevelstart=99   "避免打开文件时自动折叠所有"
 
 set ttimeout            "
 set ttimeoutlen=100     "ESC延迟
