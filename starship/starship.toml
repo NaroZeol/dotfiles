@@ -63,7 +63,8 @@ style = 'bold yellow'
 disabled = false
 
 [conda]
-format = '[$symbol$environment](dimmed green) '
+ignore_base = false
+format = ' [$symbol$environment](dimmed green) '
 disabled = false
 
 [bun]
