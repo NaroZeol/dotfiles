@@ -5,6 +5,11 @@
 	defaultBranch = main
 [core]
 	editor = vim
-    excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
-    graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
+	graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
