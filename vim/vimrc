@@ -43,7 +43,12 @@ set foldlevelstart=99   "避免打开文件时自动折叠所有"
 set ttimeout            "
 set ttimeoutlen=100     "ESC延迟
 
-colorscheme habamax     "设置主题"
+if v:version >= 900 "设置主题, habamax在9.0后引入"
+  colorscheme habamax
+else
+  colorscheme koehler
+endif
+
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 
 let mapleader = " "
