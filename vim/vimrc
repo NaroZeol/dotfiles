@@ -90,7 +90,8 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 "----------------<airline>#config end---------------------------------------------------------------------"
 
 " coc.nvim plugin configuration
-if filereadable(expand("~/.vim/plugged/coc.nvim/Readme.md"))
+if filereadable(expand("~/.vim/plugged/coc.nvim/Readme.md")) || 
+	\ filereadable(expand("~/.vim/plugged/coc.nvim/README.md"))
   source ~/.vim/coc-binding.vim
 endif
 
