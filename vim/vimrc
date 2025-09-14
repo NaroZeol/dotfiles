@@ -50,6 +50,7 @@ else
 endif
 
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
+hi Visual term=reverse cterm=reverse guibg=Grey "显式指定visual模式下高亮选中反色
 
 let mapleader = " "
 
