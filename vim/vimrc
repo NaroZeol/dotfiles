@@ -75,6 +75,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'easymotion/vim-easymotion'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'tpope/vim-sleuth'
     call plug#end()
 endif
 
