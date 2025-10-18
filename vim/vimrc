@@ -84,6 +84,7 @@ let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj' "default keys without ';'
 "----------------<easymotion>#config end  ----------------------------------------------------------------"
 
 "----------------<airline>#config begin-------------------------------------------------------------------"
+let g:bufferline_echo = 0
 let g:airline_symbols = {} 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
