@@ -55,8 +55,8 @@ hi Visual term=reverse cterm=reverse guibg=Grey "显式指定visual模式下高�
 let mapleader = " "
 
 inoremap jk <ESC>
-nnoremap J <PageDown>
-nnoremap K <PageUp>
+nnoremap J <C-D>
+nnoremap K <C-U>
 
 " 启用持久化 undo 自动创建 undodir
 if !isdirectory($HOME."/.vim")
