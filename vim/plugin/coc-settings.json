@@ -1,6 +1,5 @@
 {
-    "diagnostic.enableHighlightLineNumber": true,
-	"inlayHint.enableParameter": false,
+	"inlayHint.enable": false,
     "languageserver": {
       "clangd": {
             "command": "clangd",
