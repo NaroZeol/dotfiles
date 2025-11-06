@@ -1,8 +1,8 @@
 runtime! debian.vim
 
 if has("syntax")
-  syntax on
-endif 
+    syntax on
+endif
 
 set background=dark
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -50,7 +50,6 @@ else
 endif
 
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
-hi Visual term=reverse cterm=reverse guibg=Grey "显式指定visual模式下高亮选中反色
 
 let mapleader = " "
 
@@ -98,11 +97,11 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 "----------------<airline>#config end---------------------------------------------------------------------"
 
 " coc.nvim plugin configuration
-if filereadable(expand("~/.vim/plugged/coc.nvim/Readme.md")) || 
-	\ filereadable(expand("~/.vim/plugged/coc.nvim/README.md"))
-  source ~/.vim/coc-binding.vim
+if filereadable(expand("~/.vim/plugged/coc.nvim/Readme.md")) ||
+    \ filereadable(expand("~/.vim/plugged/coc.nvim/README.md"))
+    source ~/.vim/coc-binding.vim
 endif
 
 if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
+    source /etc/vim/vimrc.local
 endif
