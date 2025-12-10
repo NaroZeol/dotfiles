@@ -39,6 +39,11 @@
             "name": "zsh",
             "source": "zsh/zshrc",
             "destination": "~/.zshrc"
+        },
+        {
+            "name": "zsh_alias",
+            "source": "zsh/zshrc.alias",
+            "destination": "~/.zshrc.alias"
         }
     ]
 }

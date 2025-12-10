@@ -54,3 +54,7 @@ if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
 
+# alias
+if [ -f ~/.zshrc.alias ]; then
+  source ~/.zshrc.alias
+fi

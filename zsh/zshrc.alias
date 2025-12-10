@@ -1,0 +1,19 @@
+# alias
+alias gs='git status'
+
+hsgrep() {
+    # check arguments
+    if [ $# -eq 0 ]; then
+        echo "usage: hsgrep <grep_args>"
+        echo "example: hsgrep git"
+        return 1
+    fi
+
+    history | \
+        awk '{$1=""; gsub(/^[ \t]+/, ""); print}' | \
+        sort | \
+        uniq -c | \
+        sort -nr | \
+        awk '{$1=""; gsub(/^[ \t]+/, ""); print}' | \
+        grep --color=auto "$@"
+}
