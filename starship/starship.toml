@@ -1,9 +1,9 @@
 add_newline = false
 
 format = """
+$directory\
 $username\
 $hostname\
-$directory\
 $git_branch\
 $git_commit\
 $git_state\
@@ -46,10 +46,14 @@ full_symbol = '🔋'
 charging_symbol = '⚡'
 discharging_symbol = '💀'
 
+[username]
+format = 'as [$user]($style) '
+disabled = false
+
 [hostname]
 ssh_only = true
-format = '[$ssh_symbol](bold) on [$hostname](bold bright-blue) '
-ssh_symbol = '🌏'
+format = 'on [$hostname](bold bright-blue) via [$ssh_symbol](bold green) '
+ssh_symbol = 'SSH'
 
 [status]
 format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
