@@ -57,6 +57,23 @@ inoremap jk <ESC>
 nnoremap J <C-D>
 nnoremap K <C-U>
 
+" 让vim的窗口管理操作起来和tmux类似
+"
+" prefix + -创建水平分割"
+nnoremap <C-w>-         :split<CR>
+" prefix + | 创建垂直分割"
+nnoremap <C-w><Bar>     :vsplit<CR>
+" prefix + <Left> 缩小垂直边界（注意受限于vim，语义和tmux有一些不同，下同）"
+nnoremap <C-w><Left>    :vertical resize -2<CR>
+" prefix + <Right>放大垂直边界
+nnoremap <C-w><Right>   :vertical resize +2<CR>
+" prefix + <Up>放大水平边界
+nnoremap <C-w><Up>      :resize +2<CR>
+" prefix + <Down>缩小水平边界
+nnoremap <C-w><Down>    :resize -2<CR>
+" prefix + z缩放窗口（需要插件vim-maximizer支持）
+nnoremap <C-w>z         :MaximizerToggle<CR>
+
 " 启用持久化 undo 自动创建 undodir
 if !isdirectory($HOME."/.vim")
     call mkdir($HOME."/.vim", "", 0770)
@@ -75,6 +92,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'easymotion/vim-easymotion'
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-sleuth'
+    Plug 'szw/vim-maximizer'
     call plug#end()
 endif
 
