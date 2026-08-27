@@ -13,14 +13,14 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+DISABLE_AUTO_UPDATE="true" source $ZSH/oh-my-zsh.sh
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # personal settings
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-# turn off the terminal prompt ring
-unsetopt BEEP
+# use the terminal prompt ring
+# unsetopt BEEP
 
 # tab size
 tabs -4
